@@ -1,0 +1,199 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Code ThaKhin - Python Programming Basic</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/mycss.css' %}">
+  </head>
+  <body>
+<ul class="nav sticky-top justify-content-center zwetop">
+  <li class="nav-item">
+    <h5 class="nav-link active">Code ThaKhin</h5>
+    <p align="center"><input type="checkbox" onclick="myFunction()" /></p>
+  </li>
+</ul><br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-10 col-xs-12">
+              <h4>Unit 10 : Class</h4>
+              <a href="{% url 'index' %}" class="a">Python Programming Basic</a>
+            </div>
+
+        </div>
+        <br>
+        <div class='row'>
+   
+            <p class="col-xs-12 col-md-10">
+              <a class="btn btn-secondary btn-sm" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Tutorial Video
+              </a>
+            </p>   
+            <div class="container collapse" id="collapseExample">
+              <div class="card card-body strong">
+                <strong>Video Tutorial ကို January 1ရက်နေ့တင်ပေးပါမည်။</strong>
+              </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <div class="starter">
+            Class ဆိုတာ Function တွေ Data တွေကို တစ်စုတစ်ဝေးထဲ ထားထားတဲ့အစုအဝေးတစ်ခုပါပဲ။ Class သုံးခြင်းအားဖြင့် program တွေရေးတဲ့အခါမှာ ပိုပြီးအထောက်အကူဖြစ်စေပါတယ်။ class ကိုသေချာနားလည်ပြီး အသုံးချနိုင်ပြီဆိုတာနဲ့ advanced အပိုင်းတွေဖြစ်တဲ့ web development / android app / desktop application နဲ့ AI ပိုင်းတွေကိုပါ လေ့လာနိုင်သွားမှာဖြစ်ပါတယ်။
+
+            <hr>
+            Function တွေစုပြီး Simple Class လေးတစ်ခုစရေးကြည့်ပါမယ်။ Dog ဆိုတဲ့ class တစ်ခုတည်ဆောက်ပြီး အထဲမှာခွေးတစ်ကောင်ရဲ့ function အချို့ကို ရေးပြီး object တစ်ခုကနေသုံးကြည့်ပါမယ်။<br><br>
+            <small><strong><i>filename : simple_class_method.py</i></strong></small><br>
+            <code>
+              class Dog():<br>
+              &emsp;&emsp;def sit(<strong>self</strong>):<br>
+              &emsp;&emsp;&emsp;&emsp;print("Dog is sitting ")
+              <br>
+              &emsp;&emsp;def bark(<strong>self</strong>):<br>
+              &emsp;&emsp;&emsp;&emsp;print("Dog is Barking ")
+            </code><br>
+            <code>
+              dog1 = Dog()<br>
+              dog1.sit()<br>
+              dog1.bark()
+            </code>
+            <br>
+            <strong>Explanation</strong><br>
+            <ul>
+              <li>
+              class keyword နဲ့ Dog ဆိုတဲ့ Class ကိုရေးပါတယ်။ Class Name ကို capital letter (example : Dog) နဲ့ရေးပါတယ်။ function name တွေကို small letter (example : greet) နဲ့ရေးပါတယ်။ Function နဲ့ Class ကို capital & small letter ကိုကြည့်ပြီးခွဲပါတယ်။
+              </li>
+              <li>
+                class တွေမှာ ရေးတဲ့ function တွေကို class ရဲ့ method လို့ခေါ်ပါတယ်။
+                function တွေကိုသာမန်အတိုင်းရေးလို့မရပဲ self ဆိုတဲ့ keyword သုံးပြီး class နဲ့ချိတ်ဆက်ရပါတယ်။
+              </li>
+              <li>
+                function တွေတုန်းကအတိုင်းပဲ class တစ်ခုတည်ဆောက်ပြီးတိုင်း object တစ်ခုပြုလုပ်ပြီး call ခေါ်အသုံးပြုရပါတယ်။ 
+              </li>
+              <li>
+                dog1 ဆိုတဲ့ object နဲ့ Dog class ကို call ခေါ်လိုက်ပါတယ်။ အခုဆိုရင် dog1 ဆိုတဲ့ object ဟာ Dog class ထဲမှာရှိတဲ့ sit() / bark() ဆိုတဲ့ function / method တွေကို ခေါ်သုံးနိုင်ပြီဖြစ်ပါတယ်။
+              </li>
+            </ul>
+            <hr>
+
+          ဆက်လက်ပြီး Dog ဆိုတဲ့ class ထဲမှာ data တွေထပ်ဖြည့်ပါမယ်။<br><br>
+            <small><strong><i>filename : simple_class_data.py</i></strong></small><br>
+            <code>
+              class Dog():<br>
+              &emsp;&emsp;def <strong>__init__</strong>(<strong>self, name, age</strong>):<br>
+              <strong>
+              &emsp;&emsp;&emsp;&emsp;self.name = name<br>
+              &emsp;&emsp;&emsp;&emsp;self.age = age
+              </strong>
+              <br>
+              &emsp;&emsp;def sit(<strong>self</strong>):<br>
+              &emsp;&emsp;&emsp;&emsp;print("Dog is Sitting ")
+              <br>
+              &emsp;&emsp;def bark(<strong>self</strong>):<br>
+              &emsp;&emsp;&emsp;&emsp;print("Dog is Barking ")
+            </code><br>
+            <code>
+              dog1 = Dog(<strong>"Aung Net", 5</strong>)<br>
+              print(<strong>"My Dog name is ", dog1.name</strong>)<br>
+              print(<strong>"It is ", dog1.age ,"years old"</strong>)<br>
+              dog1.sit()<br>
+              dog1.bark()
+            </code>
+            <br>
+            <strong>Explanation</strong><br>
+            <ul>
+              <li>
+                name, age စတဲ့ data တွေကို constructor method ဖြစ်တဲ့ ( __init__ ) နဲ့ထည့်ပြီးဖော်ပြပါတယ်။
+                class ကနေ access လုပ်နိုင်အောင် self နဲ့ link ချိတ်ပါတယ်။
+              </li>
+              <li>
+                dog1 object နဲ့ Dog class ကိုခေါ်တဲ့အခါမှာ name, age data တွေကိုထည့်သွင်းနိုင်ပါပြီ။
+              </li>
+              <li>
+                dog1.name, dog1.age စတဲ့ data တွေကို object ကနေ ခေါ်သုံးနိုင်ပါပြီ။
+              </li>
+            </ul>
+            <hr>
+            <b>Inheritance</b><br><br>
+            အမွေဆက်ခံခြင်းလို့ အဓိပါယ်ရပါတယ်။ ကိုယ်တိုင် ရေးထားတဲ့ မူလ class ကို program လိုအပ်ချက် အတွက် upgrade လုပ်တဲ့အခါမျိုး၊ external library file တွေ module တွေ ဆီက code တွေကို upgrade လုပ်ချင်တဲ့အခါသုံးပါတယ်။ မူရင်း class ကို parent class လို့ခေါ်ပြီး upgrade လုပ်တဲ့ class ကို child class လို့ခေါ်ပါတယ်။ 
+            <hr>
+
+            မူရင်း parent class Dog ကို child class တစ်ခုမှာ inheritance လုပ်ပါမယ်။<br><br>
+            <small><strong><i>filename : inheritance.py</i></strong></small><br>
+            <code>
+              class Dog():<br>
+              &emsp;&emsp;def <strong>__init__</strong>(<strong>self, name, age</strong>):<br>
+              <strong>
+              &emsp;&emsp;&emsp;&emsp;self.name = name<br>
+              &emsp;&emsp;&emsp;&emsp;self.age = age
+              </strong>
+              <br>
+              &emsp;&emsp;def sit(<strong>self</strong>):<br>
+              &emsp;&emsp;&emsp;&emsp;print("Dog is Sitting ")
+              <br>
+              &emsp;&emsp;def bark(<strong>self</strong>):<br>
+              &emsp;&emsp;&emsp;&emsp;print("Dog is Barking ")
+            </code><br>
+            <code>
+              class Hound(<strong>Dog</strong>):<br>
+              &emsp;&emsp;def <strong>__init__</strong>(<strong>self, name, age</strong>):<br>
+              <strong>
+              &emsp;&emsp;&emsp;&emsp;super().__init__(name, age)<br>
+              </strong>
+              <br>
+              &emsp;&emsp;def play(<strong>self</strong>):<br>
+              &emsp;&emsp;&emsp;&emsp;print("Dog is Playing ")
+              <br>
+              &emsp;&emsp;def hunting(<strong>self</strong>):<br>
+              &emsp;&emsp;&emsp;&emsp;print("Dog is Hunting ")
+            </code><br>
+
+            <code>  
+              dog1 = Hound("Aungnet", 5)<br>
+              print(dog1.name)<br>
+              print(dog1.age)<br>
+              dog1.sit()<br>
+              dog1.bark()<br>
+              dog1.play()<br>
+              dog1.hunting()<br>
+            </code>
+            <br>
+            <strong>Explanation</strong><br>
+            <ul>
+              <li>
+                Hound ဆိုတဲ့ class တစ်ခုဆောက်ပြီး Dog class ကို inherit လုပ်ထားပါတယ်။
+                Dog class ရဲ့ method တွေကိုခေါ်သုံးနိုင်ပြီဖြစ်ပါတယ်။ 
+              </li>
+              <li>
+                Dog class ရဲ့ Data တွေပါခေါ်သုံးလို့ရအောင် super() function နဲ့ Hound class မှာ inherit လုပ်ထားပါတယ်။ 
+              </li>
+              <li>
+                dog1 object တစ်ခုဆောက်ပြီး Hound class ကို call ခေါ်လိုက်တဲ့အခါမှာ parent class Dog class ထဲက data တွေ method တွေကိုပါ အသုံးပြုနိုင်မှာဖြစ်ပါတယ်။
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  </body>
+</html>

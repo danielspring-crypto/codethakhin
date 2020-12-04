@@ -1,0 +1,78 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Code ThaKhin - Python Programming Basic</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/mycss.css' %}">
+  </head>
+
+<body>
+<ul class="nav sticky-top justify-content-center zwetop">
+  <li class="nav-item">
+    <h5 class="nav-link active">Code ThaKhin</h5>
+    <p align="center"><input type="checkbox" onclick="myFunction()" /></p>
+  </li>
+</ul><br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-10 col-xs-12">
+              <h5>Unit 1 : Introduction</h5>
+              <a href="{% url 'index' %}" class="a">Python Programming Basic</a>
+            </div>
+        </div>
+        <br>
+        <div class='row'>
+            <div class="col-md-12 col-xs-12">
+
+            </div>         
+        </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <div class="starter">
+Python ဆိုတာ ယနေ့ခေတ် Developer နဲ့ Program များအ ြကား common ြဖစ်နေတဲ့ Programming Languages တွေထဲက တစ်ခု ြဖစ်သလို တော်တော်လေးလည်း Easy To Learn. ြဖစ်တဲ့ Language တစ်ခုပါ။ 
+
+ဟုတ်လို့လား?? သေချာရဲ့လား 😛 ?? မဟုတ်ပါဘူး :') Easy to learn ဆိုပေမယ့် သူ့ရဲ့ main indentation ြဖစ်တဲ့ Whitespace ကိုသေချာဂရု ြပုရပါမယ်  ༎ຶ‿༎ຶ
+
+Brief History of Py Lay :3
+Python Version 2.x
+သူ့ကို 1991 - မှာ Guido van Rossum ဆိုသူက ပထမဦးဆုံးအ ြကိမ် released လုပ်ခဲ့တယ် ြပီးတော့ 2000 ခုနှစ်မှာ Python Version 2.0 ဆို ြပီး ပထမ ဆုံး အ ြကီမ် version control လုပ်ခဲ့တယ်။ 2015 မှာ discontinued လုပ်မယ်လို့ဆိုတဲ့ Python 2.0 လေးအတွက် အခုဒီ‌နှစ် 2020 ကတော့ တကယ့် EOL (End of Life) ပါ။  EOL ဆိုပေမယ့် security patches နဲ့ တ ြခား development ပိုင်းတွေကိုသာ ရပ်ဆိုင်းလိုက်မှာ ြဖစ် ြပီး 3.x ပိုင်းကိုပဲ အဓိက အသားပေးမှာ ြဖစ်ပါတယ်။ 
+Remark: Python Latest EOL Version - Python 2.7.18
+
+Python 3.x
+ဟုတ်ပါတယ်။ နောက်ထပ် version control တစ်ခုကတော့ Version 3.x ပါ 😕 ။ သူ့ကိုတော့ December 2008 မှာ released ခဲ့တာ ြပီး Major version changes ြဖစ်သွားသည့်အလျောက် version 2.x နဲ့ ြခားနားချက်တွေကတော့ Syntax ကအစပါပဲ။ ဒါပေမယ့်လည်း v2 မှသည် v3 ြဖစ်တယ့် အလျောက် တချို့သော Major Features တွေကို v2.6 နဲ့ v2.7 ကနေပဲ Reference ြပန်ယူရတာပဲ ြဖစ်ပါတယ်။ 
+Remark: Python 2.x ကို discontinued လုပ်မှာကို 2015 ကနေ 2020 အထိ postponed လုပ်လိုက်ရတာဟာ v2.x က code တွေကို v3.x အ ြဖစ် အလွယ်တကူ ‌ေြပာင်းလဲလိုက်လို့မရတာတွေ ‌ေြကာင့်ပါတဲ့ O_o။ ဒီလို ြဖစ်ရပ်မျိုး‌ေြကာင့်ပဲ Python Old School Developer တွေအတွက် 2to3 ဆိုတဲ့ utility လေးကို Python v3.x နဲ့အတူ တပါးတည်း release လုပ်ခဲ့ပါတယ် ။
+
+
+သူ့ရဲ့ရိုးရှင်း ြပီးရေးရလွယ်တဲ့ Syntax ရယ်၊ ပေါများလှတဲ့ Libraries နဲ့ Modules တွေရယ်က Devloper တွေ Programmer တွေကို အဓိက ဆွဲဆောင်နိုင်တဲ့ အချက်တွေ ြဖစ်တယ်။ သူ့ကို Scripting အနေနဲ့လဲ လူတွေ လေ့လာ ြကသလို Web Development တွေ, Data Analysis ပိုင်းနဲ့ Automation ပိုင်းတွေမှာ အသုံးများ ြကတယ်။ 
+
+ဒါကတော့ Python ဆိုတဲ့ Programming Language ‌ရဲ့ Brifly Summary ပဲ ြဖစ်တယ်။ Python နဲ့ ကိုယ်ပိုင်စိတ်ကူးနဲ့ ဘယ်လို အသုံးချချင်လဲ? ဘယ်လို Powerful ြဖစ်လဲဆိုတာ သိချင်ရင်တော့ ကိုယ်ကိုတိုင် လေ့လာဖို့ တိုက်တွန်းပါတယ်။ မဟုတ်လည်း နောက်လာမယ့် Python Beginner Course ြဖစ်တဲ့ သင်ခန်းစာတွေမှာ အလွယ်တကူ လေ့လာနိုင်ပါတယ်။
+
+<hr>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  </body>
+</html>

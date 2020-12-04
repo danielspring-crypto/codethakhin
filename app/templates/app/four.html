@@ -1,0 +1,181 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Code ThaKhin - Python Programming Basic</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/mycss.css' %}">
+  </head>
+  <body>
+<ul class="nav sticky-top justify-content-center zwetop">
+  <li class="nav-item">
+    <h5 class="nav-link active">Code ThaKhin</h5>
+    <p align="center"><input type="checkbox" onclick="myFunction()" /></p>
+  </li>
+</ul><br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-10 col-xs-12">
+              <h5>Unit 4 : Variable & Datatypes</h5>
+              <a href="{% url 'index' %}" class="a">Python Programming Basic</a>
+            </div>
+        </div>
+        <br>
+        <div class='row'>
+<p class="col-xs-12 col-md-10">
+              <a class="btn btn-secondary btn-sm" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Tutorial Video
+              </a>
+            </p>   
+            <div class="container collapse" id="collapseExample">
+              <div class="card card-body strong">
+                <strong>Video Tutorial ကို January 1ရက်နေ့တင်ပေးပါမည်။</strong>
+              </div>
+            </div>        
+        </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <div class="starter">
+            Variable ဆိုတဲ့သဘောတရားဟာ ငယ်ငယ်တုန်းက မသိကိန်းပုစာအတွက်အချက်မှာ တန်ဖိုးထည့်ရသလိုမျိုးပါပဲ။ မောင်မောင် ရဲ့အသက်ကို x ဟုထားပါ။ မောင်မောင်သည် ကျော်ကျော်ထက် 2 နှစ်ပိုကြီးသည်လို့ဆိုလိုတာနဲ့ x = 2y လို့ ရေးရသလိုပါပဲ။
+            <br><br>
+            variable တစ်ခုကို data သွင်းပြီး output ထုတ်တာကို စမ်းကြည့်ကြပါမယ်။<br><br>
+            <small><i><strong>filename : variable.py</strong></i></small>
+            <code>
+              x = "I love Programming"<br>
+              print(x)<br>
+            </code><br>
+            <strong>Explanation</strong><br>
+            <ul>
+              <li>x သည် variable ဖြစ်ပြီး "I love programming" ဆိုတဲ့ data ကိုထည့်ထားပါတယ်။</li>
+              <li>ထို့နောက် x ထဲမှာရှိတဲ့တန်ဖိုးကို print() နဲ့ထုတ်ပြီးပြတဲ့အခါ x ရဲ့ data တွေထွက်လာပါတယ်။</li>
+            </ul>
+            <hr>
+            Variable Name ပေးတဲ့အခါမှာ pythoner တို့ အနေနဲ့ မိမိရေးတဲ့ program အပေါ်မူတည်ပြီးဆီလျော်အောင်ပေးဖို့လိုအပ်ပါတယ်။<br> Variable Name ပေးတဲ့အခါမှာ အောက်ပါပုံစံမျိုး တွေမပါဝင်အောင်အထူး သတိထားရပါမယ်။
+
+            <ul>
+              <li>special character (eg:  !@#$%^&*)</li>
+              <li>ရှေ့ဆုံးစကားလုံး ကိန်းဂဏန်း (eg: 1x)</li>
+              <li>space and tab (eg: 1 x)</li>
+              <li>programming syntax (eg: type, class, for)</li>
+            </ul>
+            <hr>
+            Variable ထဲမှာထည့်သွင်းနိုင်တဲ့ datatype အမျိုးမျိုးရှိပြီး builtin function ဖြစ်တဲ့ type() ကိုသုံး၍ စစ်ကြည့်နိုင်ပါတယ်။<br><br>
+            <small><i><strong>filename : check_variable.py</strong></i></small>
+            <code>
+              x = "I love Programming"<br>
+              print(type(x))<br>
+            </code><br>
+            <strong>Explanation</strong><br>
+            <ul>
+              <li>Output မှာ str လို့ပြတဲ့အတွက် x ထဲမှာရှိတဲ့ datatype သည် string အမျိုးအစားဖြစ်ပါတယ်။</li>
+            </ul>
+            <hr>
+
+
+<p align='center'><b>Datatypes</b></p>
+<table class="table table-bordered">
+    <tr>
+      <td>Type</td>
+      <td>Notation</td>
+      <td>Example</td>
+    </tr>
+    <tr>
+      <td>String Type </td>
+      <td>str</td>
+      <td>"programming"</td>
+    </tr>
+    <tr>
+      <td>Numeric Type</td>
+      <td>int</td>
+      <td>0, 1, 2, ...</td>
+    </tr>
+    <tr>
+      <td>Numeric Type</td>
+      <td>float</td>
+      <td>13.50</td>
+    </tr>
+    <tr>
+      <td>Numeric Type</td>
+      <td>complex</td>
+      <td>3 + 5j</td>
+    </tr>
+    <tr>
+      <td>Sequence Type</td>
+      <td>list</td>
+      <td>[1, 3, 5]</td>
+    </tr>
+    <tr>
+      <td>Sequence Type</td>
+      <td>tuple</td>
+      <td>(1, 2, 4)</td>
+    </tr>
+    <tr>
+      <td>Sequence Type</td>
+      <td>range</td>
+      <td>(1, 100)</td>
+    </tr>
+    <tr>
+      <td>Mapping Type</td>
+      <td>dict</td>
+      <td>{'key':'value'}</td>
+    </tr>
+    <tr>
+      <td>Set Type</td>
+      <td>set</td>
+      <td>{1, 2, 3}</td>
+    </tr>
+    <tr>
+      <td>Boolean Type</td>
+      <td>bool</td>
+      <td>True/False</td>
+    </tr>
+    <tr>
+      <td>Binary Type</td>
+      <td>byte</td>
+      <td align="center"> - </td>
+    </tr>
+</table>
+<hr>
+<strong>String Concatenation</strong><br>
+String Concatenation ဆိုတာဟာ data နှစ်ခုနဲ့ နှစ်ခုထက်ပိုတဲ့ output တွေပြဖို့ရာအတွက်သုံးပါတယ်။ concatenate လုပ်တဲ့အခါ ',' ခံပြီးသုံးရပါမယ်။ 
+<br><br>
+<small><i><strong>filename : string_concatenate.py</strong></i></small>
+<code>
+  print("I love ", "Programming")
+</code>
+<hr>
+
+Variable နဲ့ လဲတွဲထုတ်လို့ရပါတယ်။
+<br><br>
+<small><i><strong>filename : concatenate.py</strong></i></small>
+<code>
+  x = "Programming"<br>
+  print("I love ", x)
+</code>
+<hr>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  </body>
+</html>

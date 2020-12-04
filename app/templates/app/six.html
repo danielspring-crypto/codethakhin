@@ -1,0 +1,169 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Code ThaKhin - Python Programming Basic</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/mycss.css' %}">
+  </head>
+  <body>
+<ul class="nav sticky-top justify-content-center zwetop">
+  <li class="nav-item">
+    <h5 class="nav-link active">Code ThaKhin</h5>
+    <p align="center"><input type="checkbox" onclick="myFunction()" /></p>
+  </li>
+</ul><br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-10 col-xs-12">
+              <h4>Unit 6 : Condition</h4>
+              <a href="{% url 'index' %}" class="a">Python Programming Basic</a>
+            </div>
+        </div>
+        <br>
+        <div class='row'>
+<p class="col-xs-12 col-md-10">
+              <a class="btn btn-secondary btn-sm" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Tutorial Video
+              </a>
+            </p>   
+            <div class="container collapse" id="collapseExample">
+              <div class="card card-body strong">
+                <strong>Video Tutorial ကို January 1ရက်နေ့တင်ပေးပါမည်။</strong>
+              </div>
+            </div>       
+        </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <div class="starter">
+            Condition ဆိုတာ program ရဲ့ action အပေါ်မူတည်ပြီး အလုပ်လုပ်တဲ့ သဘောတရားဖြစ်ပါတယ်။ condition ဟာ simple program လေးတွေကနေစပြီး AI ပိုင်းတွေအထိပါအရေးကြီးပါတယ်။
+            <hr>
+            Python မှာ condition ပုံစံ ၂ မျိုးရှိပါတယ်။ 
+            <ol>
+              <li>if else </li>
+              <li>if elif else</li>
+            </ol>
+            if else condition ကို ၂ ခုထက်မပိုတဲ့ action တွေအတွက်သုံးပြီး<br>
+            if elif else condition ကိုတော့ ၂ ခုထက်ပိုတဲ့ action တွေအတွက်သုံးပါတယ်။
+            <hr>
+            <strong>if else condition</strong><br><br>
+            ဒီ program မှာ action 2 ခုစာအတွက် condition စစ်ထားတာကိုတွေ့ရပါမယ်။ ရမှတ် ၃၉ မှတ်အထက်ရရင် စာမေးပွဲအောင်မယ်။ ဒါမှမဟုတ်ရင် ကျတယ် ဆိုတဲ့သဘောတရားကိုတွေ့ရပါမယ်။ condition တစ်ခုစစ်လိုက်တိုင်း မှာ ဖြစ်စေချင်တဲ့ result ကို tab တချက်ရိုက်ပြီး ရေးရပါတယ်။ ဒီ action လာရင် သူ့အောက်က result လာမယ် လို့ဆိုလိုပါတယ်။<br><br>
+            <small><i><strong>filename : condition.py</strong></i></small>
+            <code>
+              if marks > 39:<br>
+              &emsp;&emsp;print("You passed the Exam")<br>
+              else:<br>
+              &emsp;&emsp;print("You Failed the Exam")
+            </code>
+            <br>
+            User Input ရမှတ် ကိုရိုက်ထည့်ပြီး စာမေးပွဲအောင်မအောင် အဖြေထုတ်ပေးတဲ့ program လေးကိုဆက်လက်ရေးကြည့်ပါမယ်။<br><br>
+            <small><i><strong>filename : exam_result.py</strong></i></small>
+            <code>
+              marks = input("Enter Marks : ")<br>
+              if marks > 39:<br>
+              &emsp;&emsp;print("You passed the Exam")<br>
+              else:<br>
+              &emsp;&emsp;print("You Failed the Exam")
+            </code>
+            <hr>
+            <strong>if elif else condition</strong><br><br>
+            Action 3 ခုထက်ပိုပြီးအလုပ်လုပ်ရမယ့် calculator program တစ်ခုကိုရေးကြည့်ပါမယ်။ User Input ဂဏန်း 2 ခုရိုက်ထည့်ပေးရပြီး ( +, -, *, / ) ရွေးချယ်ကာ တွက်ချက်အဖြေထုတ်ပေးတဲ့ simple calculator program ဖြစ်ပါတယ်။<br><br>
+            <small><i><strong>filename : simple_calculator.py</strong></i></small>
+            <code>
+              num1 = int(input("Enter Number 1 : "))<br>
+              num2 = int(input("Enter Number 2 : "))<br>
+              print(" +, -, *, / ")<br>
+              choice = input("Enter Your Choice : ")<br>
+              if choice == "+":<br>
+              &emsp;&emsp;answer = num1 + num2<br>
+              &emsp;&emsp;print(answer)<br>
+              elif choice == "-":<br>
+              &emsp;&emsp;answer = num1 - num2<br>
+              &emsp;&emsp;print(answer)<br>
+              elif choice == "*":<br>
+              &emsp;&emsp;answer = num1 * num2<br>
+              &emsp;&emsp;print(answer)<br>
+              elif choice == "/":<br>
+              &emsp;&emsp;answer = num1 / num2<br>
+              &emsp;&emsp;print(answer)<br>
+              else:<br>
+              &emsp;&emsp;print("Try Again!")
+            </code><br>
+            <strong>Explanation</strong>
+            <ul>
+              <li>ပထမဆုံး user input နှစ်ခုစာ input တောင်းပါတယ်။</li>
+              <li>ပြီးတော့ User ရဲ့ choice ကိုတောင်းပါတယ်။</li>
+              <li>User ရဲ့ choice က + operator နဲ့ညီရင် ပေါင်းတဲ့အလုပ်လုပ်ပါမယ်။</li>
+              <li>Programming မှာ ညီတယ်ဆိုတဲ့ သဘောတရားကို " == " operator နဲ့ပြပါတယ်။ </li>
+              <li>" = " ဆိုတဲ့ assignment operator ကိုတော့ variable ထဲမှာ value ထည့်ဖို့အတွက်သုံးပါတယ်။</li>
+            </ul>
+            <hr>
+            <p align="center"><b>Operators</b></p>
+<table class="table table-bordered">
+    <tr>
+      <td>Operators</td>
+      <td>Symbol</td>
+    </tr>
+    <tr>
+      <td>Arithmetic Operator</td>
+      <td>( +, -, *, /, %, //, ** )</td>
+    </tr>
+    <tr>
+      <td>Relational Operator</td>
+      <td>(<, >, ==, >=, <=, !=)</td>
+    </tr>
+    <tr>
+      <td>Assignment Operator</td>
+      <td>( =, +=, -=, /=, *= )</td>
+    </tr>
+    <tr>
+      <td>Logical Operator</td>
+      <td>(and, or, not)</td>
+    </tr>
+    <tr>
+      <td>Membership Operator</td>
+      <td>(in, not in)</td>
+    </tr>
+    <tr>
+      <td>Identity Operator</td>
+      <td>(is, is not)</td>
+    </tr>
+    <tr>
+      <td>Bitwise Operator</td>
+      <td>(&, |, ^, ~, <<, >>)</td>
+    </tr>
+</table>
+
+ 
+ 
+ 
+ 
+
+
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  </body>
+</html>

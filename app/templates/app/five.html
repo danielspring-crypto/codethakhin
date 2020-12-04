@@ -1,0 +1,120 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Code ThaKhin - Python Programming Basic</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/mycss.css' %}">
+  </head>
+  <body>
+<ul class="nav sticky-top justify-content-center zwetop">
+  <li class="nav-item">
+    <h5 class="nav-link active">Code ThaKhin</h5>
+    <p align="center"><input type="checkbox" onclick="myFunction()" /></p>
+  </li>
+</ul><br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-10 col-xs-12">
+              <h5>Unit 5 : Built-in Functions</h5>
+              <a href="{% url 'index' %}" class="a">Python Programming Basic</a>
+            </div>
+        </div>
+        <br>
+        <div class='row'>
+<p class="col-xs-12 col-md-10">
+              <a class="btn btn-secondary btn-sm" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Tutorial Video
+              </a>
+            </p>   
+            <div class="container collapse" id="collapseExample">
+              <div class="card card-body strong">
+                <strong>Video Tutorial ကို January 1ရက်နေ့တင်ပေးပါမည်။</strong>
+              </div>
+            </div>       
+        </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <div class="starter">
+            print( ) နဲ့ type( ) builtin function တွေ ရဲ့အလုပ်လုပ်ပုံအကြောင်းကို Unit 3 & 4 မှာရှင်းပြခဲ့ပါတယ်။ ဆက်လက်ပြီး အသုံးများတဲ့ builtin function တွေအကြောင်းကိုလေ့လာကြည့်ပါမယ်။  
+            Builtin Function များအကြောင်းအပြည့်အစုံ သိရှိလိုပါက<a href="https://docs.python.org/3/library/functions.html" class="a"> Python Official Website </a>မှာ ဆက်လက်လေ့လာနိုင်ပါတယ်။   
+
+            <hr>
+
+            <b>input( )</b><br> user ရဲ့ input တောင်းတဲ့အခါသုံးပါတယ်။ အောက်ဖော်ပြပါ input.py file ကို Run ကြည့်လိုက်တဲ့အခါ program က Enter Something ဆိုပြီး input တောင်းတာကိုတွေ့ရပါမယ်။ Input တစ်ခုကိုရိုက်ထည့်ပြီး enter ခေါက်လိုက်တဲ့အခါ pythoner တို့ရိုက်ထည့်ထားတဲ့ input ကို result ထုတ်ပြထားတာတွေ့ရပါမယ်။ <br><br>
+            <small><i><strong>filename : input.py</strong></i></small>
+            <code>
+              x = input("Enter Something : ")<br>
+              print("You entered ", x)<br>
+            </code><br>
+            input( ) function မှာ default datatype အနေနဲ့ user ထဲ့လိုက်တဲ့ data တိုင်းကို str (string method) အနေနဲ့မှတ်ယူပါတယ်။ type( ) နဲ့ လည်းစစ်ကြည့်လို့ရနိုင်ပါတယ်။<br><br>
+            <small><i><strong>filename : input.py</strong></i></small>
+            <code>
+              x = input("Enter Something : ")<br>
+              print("You entered ", x)<br>
+              <strong>print(type(x))</strong>
+            </code>
+            <hr>
+
+            <b>int( )</b><br> ကိန်းဂဏန်းပြောင်းချင်တဲ့အခါသုံးတဲ့ function ဖြစ်ပါတယ်။ <br><br>
+            <small><i><strong>filename : int.py</strong></i></small>
+            <code>
+              x = int(input("Enter number : "))<br>
+              print(x)<br>
+              print(type(x))
+            </code>
+
+            <hr>
+
+            <b>str( )</b><br> စာသားအဖြစ်ပြောင်းချင်တဲ့အခါသုံးတဲ့ function ဖြစ်ပါတယ်။ value ဖြစ်တဲ့ 12345 ဆိုတဲ့ int (integer) ကို str (string) အဖြစ်ပြောင်းပြထားတာကိုတွေ့ရပါမယ်။ <br><br>
+            <small><i><strong>filename : str.py</strong></i></small>
+            <code>
+              x = 12345<br>
+              print(type(x))<br>
+              x = str(x)<br>
+              print(type(x))
+            </code>
+
+            <hr>
+
+            <b>len( )</b><br> စာလုံးအရေအတွက် စစ်ချငတဲ့နေရာမှာသုံးပါတယ်။<br><br>
+            <small><i><strong>filename : len.py</strong></i></small>
+            <code>
+              x = "Hello Programming"<br>
+              print(len(x))
+            </code>
+
+            <hr>
+
+
+
+
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Code ThaKhin - Python Programming Basic</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'app/mycss.css' %}">
+  </head>
+  <body>
+<ul class="nav sticky-top justify-content-center zwetop">
+  <li class="nav-item">
+    <h5 class="nav-link active">Code ThaKhin</h5>
+    <p align="center"><input type="checkbox" onclick="myFunction()" /></p>
+  </li>
+</ul><br>
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-10 col-xs-12">
+              <h4>Unit 9 : Function</h4>
+              <a href="{% url 'index' %}" class="a">Python Programming Basic</a>
+            </div>
+        </div>
+        <br>
+        <div class='row'>
+<p class="col-xs-12 col-md-10">
+              <a class="btn btn-secondary btn-sm" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                Tutorial Video
+              </a>
+            </p>   
+            <div class="container collapse" id="collapseExample">
+              <div class="card card-body strong">
+                <strong>Video Tutorial ကို January 1ရက်နေ့တင်ပေးပါမည်။</strong>
+              </div>
+            </div>     
+        </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-xs-12">
+          <div class="starter">
+            Function ဆိုတာ program တစ်ခုလုံးရဲ့ အစိတ်အပိုင်းများ သီးခြားအလုပ်လုပ်ဖို့ ရေးထားတဲ့ code ဖြစ်ပါတယ်။၊<br> ဥပမာ - smart ဖုန်းတစ်လုံးဟာ program ကြီးတစ်ခုဆိုရင် camera ရိုက်တာ phone ခေါ်တာ သီချင်းနားထောင်တာ တွေဟာ function တွေ ဖြစ်ပါတယ်။
+            <hr>
+            Simple Function တစ်ခုကိုစတင်ရေးကြည့်ပါမယ်။ အောက်ပါအတိုင်းရေးပြီး run လိုက်ရင်ဘာမှပေါ်လာမှာမဟုတ်ပါဘူး။ ဘာလို့လဲဆိုတော့ function တစ်ခုဖန်တီးပြီးတာနဲ့ function name နဲ့ call ခေါ်မှ အလုပ်လုပ်တာဖြစ်ပါတယ်။ ဒါ့ကြောင့် greet() လို့ အောက်မှာ function call ခေါ်ပေးရပါမယ်။ <br><br>
+            <small><strong><i>filename : function.py</i></strong></small><br>
+            <code>
+              def greet():<br>
+              &emsp;&emsp;print("Mingalarbar")
+            </code><br>
+            <code>
+              <b>greet()</b>
+            </code>
+            <hr>
+            parameter, argument နဲ့ object တွေအကြောင်းကို ဆက်လက်လေ့လာကြပါမယ်။<br>
+            <b>Parameter</b> ဟာ function တည်ဆောက်ရာမှာ data store ဖို့ variable တစ်ခုအနေနဲ့ အလုပ်လုပ်ပါတယ်။<br>
+            <b>Argument</b> ဟာ function ထဲကိုထည့်မယ့်တန်ဖိုးဖြစ်ပါတယ်။<br>
+            Function Call ခေါ်တဲ့အခါမှာ assign လုပ်လို့ရတဲ့ variable ကို <b>object</b> လို့ခေါ်ပါတယ်။
+            <br><br>
+            <small><strong><i>filename : function2.py</i></strong></small>
+            <code>
+              def greet(<b>username</b>):<br>
+              &emsp;&emsp;print("Hello ", username)<br>
+            </code>
+            <br>
+            <code>
+              <b>person1</b> = greet(<b>"Daniel"</b>)
+            </code><br>
+            <strong>Explanation</strong><br>
+            <ul>
+              <li>greet() ဆိုတဲ့ နှုတ်ဆက်တဲ့ function တစ်ခုပြုလုပ်ထားပါတယ်။</li>
+              <li>greet က function name ဖြစ်ပြီး၊ parameter ကတော့ username ဖြစ်ပါတယ်။</li>
+              <li>Function အလုပ်လုပ်ရန်အတွက် Function call ခေါ်ရပါတယ်။</li>
+              <li>function call ထဲမှာရှိတဲ့ Daniel က argument ဖြစ်ပါတယ်</li>
+              <li>person1 ဟာ variable ဖြစ်ပေမယ့်၊ function assign လုပ်လိုက်တဲ့အခါ object လို့ခေါ်ပါတယ်။</li>
+            </ul>
+            <hr>
+            <b>Types of Arguments</b><br>
+            <ol>
+              <li>Positional Argument (အသုံးများ)</li>
+              <li>Keyword Argument</li>
+              <li>Arbitary Argument</li>
+            </ol>
+            <hr>
+            <strong>Positional Argument</strong><br><br>
+            parameter 2 ခု ထက်ပိုရှိတဲ့အခါမှာ သုံးပါတယ်။ အရင်လာတဲ့ argument တန်ဖိုးကို function ရဲ့ ပထမနေရာမှာထည့်တာမျိုးပါ။<br><br>
+            <small><strong><i>filename : positional_argument.py</i></strong></small>
+            <code>
+              def greet(<b>username, age</b>):<br>
+              &emsp;&emsp;print("Hello, I am ", username)<br>
+              &emsp;&emsp;print("I am ", age)
+            </code>
+            <br>
+            <code>
+              person1 = greet(<b>"Daniel Dufrank", 22</b>)
+            </code>
+            <hr>
+            <strong>Keyword Argument</strong><br><br>
+            parameter 2 ခု ထက်ပိုရှိတဲ့အခါမှာ သုံးပါတယ်။ နေရာတကျဖြစ်စရာမလိုပဲ pythoner တို့တွဲချင်တဲ့ parameter နဲ့ argument နဲ့ တွဲလို့ရတာကိုဆိုလိုပါတယ်။<br><br>
+            <small><strong><i>filename : keyword_argument.py</i></strong></small>
+            <code>
+              def greet(<b>username, age</b>):<br>
+              &emsp;&emsp;print("Hello, I am ", username)<br>
+              &emsp;&emsp;print("I am ", age)
+            </code>
+            <br>
+            <code>
+              person1 = greet(<b>username = "Daniel", age = 22</b>)
+            </code>
+            <hr>
+            <strong>Arbitary Argument</strong><br><br>
+            Argumet ဘယ်နှခုမှန်း parameter ကမသိရတဲ့အခါသုံးပါတယ်။<br><br>
+            <small><strong><i>filename : arbitary_argument.py</i></strong></small>
+            <code>
+              def profile(<b>*info</b>):<br>
+              &emsp;&emsp;print(info)<br>
+            </code>
+            <br>
+            <code>
+              person1 = profile("Daniel", 22, "Male")
+            </code>
+            <hr>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  </body>
+</html>

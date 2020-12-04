@@ -1,0 +1,125 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Code ThaKhin</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+    <style type="text/css">
+        body {
+          font-family: font-family: 'Comfortaa', cursive;
+          background-color: #FCFCFF;
+          color: black;
+          letter-spacing: 0.1em;
+        }
+
+        a.a{
+            text-decoration: none;
+            color: black;
+        }
+        .dark-mode {
+          background-color: #29292D;
+          color: #efefef;
+        }
+
+        input[type="checkbox"] {
+          position: relative;
+          width: 60px;
+          height: 30px;
+          -webkit-appearance: none;
+          background: #c6c6c6;
+          outline: none;
+          cursor: pointer;
+          border-radius: 20px;
+          box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+          transition: background 300ms linear;
+        }
+
+        input:checked[type="checkbox"] {
+          background: #4D4D4D;
+        }
+
+        input[type="checkbox"]::before {
+          content: "";
+          position: absolute;
+          width: 30px;
+          height: 30px;
+          border-radius: 20px;
+          top: 0;
+          left: 0;
+          background: #fff;
+          transform: scale(1.1);
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+          transition: left 300ms linear;
+        }
+
+        input:checked[type="checkbox"]::before {
+          left: 40px;
+        }
+
+        .zwetop{
+          background-color: white;
+          color: #000;
+          border-bottom: 1px solid #efefef;
+        }
+
+    </style>
+  </head>
+  <body>
+
+<ul class="nav sticky-top justify-content-center zwetop">
+  <li class="nav-item">
+    <h5 class="nav-link active" align="center">Code ThaKhin</h5>
+    <p align="center"><img src="{% static 'app/python.png' %}" width="10%"> Python Programming Basic</p>
+  </li>
+</ul>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-xs-12">
+                <br>
+                <div class="alert alert-dark" role="alert">
+                  <a href="{% url 'one' %}" class="a">1. Introduction</a>
+                </div>
+                <div class="alert alert-dark" role="alert">
+                  <a href="{% url 'two' %}" class="a">2. Environmental Setup</a>
+                </div>
+                <div class="alert alert-dark" role="alert">
+                  <a href="{% url 'three' %}" class="a">3. Basic Syntax</a>
+                </div>
+                <div class="alert alert-dark" role="alert">
+                  <a href="{% url 'four' %}" class="a">4. Variable & Datatypes</a>
+                </div>
+                <div class="alert alert-dark" role="alert">
+                  <a href="{% url 'five' %}" class="a">5. Built-in Functions</a>
+                </div>
+                <div class="alert alert-dark" role="alert">
+                  <a href="{% url 'six' %}" class="a">6. Condition</a>
+                </div>
+                <div class="alert alert-dark" role="alert">
+                  <a href="{% url 'seven' %}" class="a">7. Loop</a>
+                </div>
+                <div class="alert alert-dark" role="alert">
+                  <a href="{% url 'eight' %}" class="a">8. Data Structure</a>
+                </div>
+                <div class="alert alert-dark" role="alert">
+                  <a href="{% url 'nine' %}" class="a">9. Function</a>
+                </div>
+                <div class="alert alert-dark" role="alert">
+                  <a href="{% url 'ten' %}" class="a">10. Class</a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  </body>
+</html>
